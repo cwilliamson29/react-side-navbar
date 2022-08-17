@@ -4,6 +4,14 @@ body {
     height: 100%;
 }
 
-.box-inner {
+.app-height {
     height: 100vh;
+}
+
+.app-height1 {
+    height: 100%;
+}
+
+h1 {
+    text-align: right;
 }
