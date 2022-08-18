@@ -1,49 +1,84 @@
 import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-} from "reactstrap";
-import NavInfo from "./NavigationInfo";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
+import { SidebarData } from "./sidebar-data";
+import SubMenu from "./SubMenuComponent";
+import IconMenu from "./IconMenuComponent";
 
-function SideNavbar(args) {
-  const [isOpen, setIsOpen] = useState(false);
+const Nav = styled.div`
+  background: #131429;
+  width: 80px;
+`;
 
-  const toggle = () => setIsOpen(!isOpen);
+const NavIcon = styled(Link)`
+  margin-left: 2rem;
+  font-size: 2rem;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+const SideBarNav = styled.div`
+  background: #131429;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
+  transition: 350ms;
+  z-index: 10;
+`;
+const IconBarNav = styled.div`
+  background: #131429;
+  width: 80px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  transition: 350ms;
+  z-index: 10;
+`;
+
+const SidebarWrap = styled.div`
+  width: 100%;
+`;
+
+function SideBar() {
+  const [sidebar, setSidebar] = useState(true);
+
+  const showSidebar = () => setSidebar(!sidebar);
   return (
-    <>
-      {/*Primary Sidebar navigation responsive design*/}
-      <div className="col-12 bg-primary d-block d-sm-block d-md-block d-lg-none">
-        <Navbar {...args}>
-          <NavbarBrand href="/">React-SideBar</NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav className="me-auto" navbar>
-              <NavInfo />
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-      <div className="col-lg-2 col-xl-2 bg-primary d-none d-sm-none d-md-none d-lg-block">
-        <div className="bg-primary text-right">
-          <Nav vertical>
-            <NavbarBrand href="/">Main Menu</NavbarBrand>
+    <Nav className="d-none d-sm-none d-md-none d-lg-block">
+      <IconBarNav>
+        <SidebarWrap>
+          <NavIcon to="#">
+            <FaIcons.FaArrowCircleRight onClick={showSidebar} />
+          </NavIcon>
 
-            <NavInfo />
-          </Nav>
-        </div>
-      </div>
-    </>
+          {SidebarData.map((item, index) => {
+            return <IconMenu item={item} key={index} />;
+          })}
+        </SidebarWrap>
+      </IconBarNav>
+
+      <SideBarNav sidebar={sidebar}>
+        <SidebarWrap>
+          <NavIcon to="#">
+            <FaIcons.FaArrowCircleLeft onClick={showSidebar} />
+          </NavIcon>
+          {SidebarData.map((item, index) => {
+            return <SubMenu item={item} key={index} />;
+          })}
+        </SidebarWrap>
+      </SideBarNav>
+    </Nav>
   );
 }
 
-export default SideNavbar;
+export default SideBar;
