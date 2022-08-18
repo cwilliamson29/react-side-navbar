@@ -7,10 +7,11 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <SideBar />
       <TopNav />
+      <SideBar />
       <div className="container-fluid bg-secondary flex-start">
         <div className="row">
+          <div className="sidebar-spacer"></div>
           <RPane />
         </div>
       </div>

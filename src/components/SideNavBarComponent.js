@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./sidebar-data";
 import SubMenu from "./SubMenuComponent";
 import IconMenu from "./IconMenuComponent";
@@ -10,6 +9,8 @@ import IconMenu from "./IconMenuComponent";
 const Nav = styled.div`
   background: #131429;
   width: 80px;
+  margin-right: 10px;
+  z-index: 0;
 `;
 
 const NavIcon = styled(Link)`

@@ -13,22 +13,32 @@ import {
   DropdownItem,
   NavbarText,
 } from "reactstrap";
+import TopMenu from "./TopMenuComponent";
+import { SidebarData } from "./sidebar-data";
 
 function TopNav(args) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
   return (
     <>
-      {/*Primary Sidebar navigation responsive design*/}
-      <div className="text-white col-12 d-block d-sm-block d-md-block d-lg-none bg-custom text-white">
-        <Navbar {...args}>
-          <NavbarBrand href="/" className="text-white">
+      <div className="col-12 d-block d-sm-block d-md-block d-lg-none bg-custom">
+        <Navbar color="primary" dark expand="lg">
+          <NavbarBrand href="/" className="mr-auto navbar-dark">
             React-SideBar
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="me-auto" navbar></Nav>
+            <Nav navbar>
+              {SidebarData.map((item, index) => {
+                return (
+                  <NavItem>
+                    <TopMenu item={item} key={index} />
+                  </NavItem>
+                );
+              })}
+            </Nav>
           </Collapse>
         </Navbar>
       </div>
