@@ -32,7 +32,7 @@ const SideBarNav = styled.div`
   top: 0;
   left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
   transition: 350ms;
-  z-index: 10;
+  z-index: 11;
 `;
 const IconBarNav = styled.div`
   background: #131429;
@@ -51,7 +51,7 @@ const SidebarWrap = styled.div`
 `;
 
 function SideBar() {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
   return (
@@ -59,7 +59,10 @@ function SideBar() {
       <IconBarNav>
         <SidebarWrap>
           <NavIcon to="#">
-            <FaIcons.FaArrowCircleRight onClick={showSidebar} />
+            <FaIcons.FaArrowCircleRight
+              style={{ color: "#11a4ba" }}
+              onClick={showSidebar}
+            />
           </NavIcon>
 
           {SidebarData.map((item, index) => {
@@ -71,7 +74,10 @@ function SideBar() {
       <SideBarNav sidebar={sidebar}>
         <SidebarWrap>
           <NavIcon to="#">
-            <FaIcons.FaArrowCircleLeft onClick={showSidebar} />
+            <FaIcons.FaArrowCircleLeft
+              style={{ color: "#11a4ba" }}
+              onClick={showSidebar}
+            />
           </NavIcon>
           {SidebarData.map((item, index) => {
             return <SubMenu item={item} key={index} />;

@@ -42,14 +42,8 @@ function TopNav(args) {
           </Collapse>
         </Navbar>
       </div>
-      <div className="text-white col-lg-2 col-xl-2 d-none d-sm-none d-md-none d-lg-block top-nav-mar bg-custom">
-        <div className="text-right">
-          <Navbar vertical className="text-white">
-            <NavbarBrand href="/" className="text-white">
-              React-SideBar
-            </NavbarBrand>
-          </Navbar>
-        </div>
+      <div className="d-none d-sm-none d-md-none d-lg-block top-nav-mar bg-custom">
+        <div className="col-10">React-SideBar</div>
       </div>
     </>
   );

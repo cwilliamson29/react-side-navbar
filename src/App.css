@@ -2,7 +2,6 @@ html,
 body {
     margin: 0px;
     height: 100vh;
-    background-color: purple;
 }
 
 .app-height {
@@ -33,35 +32,39 @@ body {
     width: 14%;
 }
 
-@media screen and (min-width: 768px) and (min-height: 500px) {
+@media screen and (min-width: 992px) and (orientation: landscape),
+screen and (min-width: 992px) and (orientation: portrait) {
     body {
         margin: 0px;
         height: 100vh;
-        width: calc(100vw - 95px);
-        background-color: purple;
+    }
+    .root {
+        width: 100vw !important;
     }
     .RPane {
-        margin-top: 65px;
-        margin-left: 85px;
-        width: 100%;
-    }
-    .sidebar-spacer {
-        width: 85px;
+        position: absolute;
+        left: 104px;
+        margin-top: 75px;
+        width: calc(100vw - 140px);
+        z-index: 0;
     }
     .top-nav-mar {
         position: fixed;
         left: 80px;
-        width: 100%;
+        width: calc(100vw - 80px);
         height: 60px;
         padding-left: 180px;
+        color: white;
+        z-index: 8;
     }
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape),
-screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 991px) and (orientation: landscape),
+screen and (max-width: 991px) and (orientation: portrait) {
     .RPane {
         margin-top: 5px;
         margin-left: 0px;
+        width: 100%;
     }
     .collapse {
         margin-top: 0px;
