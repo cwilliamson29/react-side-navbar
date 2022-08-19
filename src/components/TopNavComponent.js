@@ -6,12 +6,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
 } from "reactstrap";
 import TopMenu from "./TopMenuComponent";
 import { SidebarData } from "./sidebar-data";
@@ -25,15 +19,15 @@ function TopNav(args) {
     <>
       <div className="col-12 d-block d-sm-block d-md-block d-lg-none bg-custom">
         <Navbar dark expand="lg">
-          <NavbarBrand href="/" className="mr-auto navbar-dark">
+          <NavbarBrand href="/" className="mr-auto navbar-dark link-color">
             React-SideBar
           </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
+          <NavbarToggler className="custom-toggler" onClick={toggle} />
+          <Collapse className="custom-toggler" isOpen={isOpen} navbar>
             <Nav navbar>
               {SidebarData.map((item, index) => {
                 return (
-                  <NavItem>
+                  <NavItem key={index}>
                     <TopMenu item={item} key={index} />
                   </NavItem>
                 );
@@ -43,7 +37,7 @@ function TopNav(args) {
         </Navbar>
       </div>
       <div className="d-none d-sm-none d-md-none d-lg-block top-nav-mar bg-custom">
-        <div className="col-10">React-SideBar</div>
+        <div className="col-10 logo">React-SideBar</div>
       </div>
     </>
   );

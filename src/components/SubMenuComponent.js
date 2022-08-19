@@ -13,11 +13,11 @@ const SidebarLink = styled(Link)`
   text-decoration: none;
   font-size: 22px;
 
-  &:hover{
-    background #252831;
+  &:hover {
+    background: #252831;
     border-left: 4px solid #11a4ba;
     color: white;
-    cursor: pointer; 
+    cursor: pointer;
   }
 `;
 

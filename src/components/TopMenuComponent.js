@@ -1,18 +1,5 @@
 import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-} from "reactstrap";
+import { NavLink, DropdownItem } from "reactstrap";
 
 function TopMenu({ item }) {
   const [subnav, setSubnav] = useState(false);
@@ -23,17 +10,18 @@ function TopMenu({ item }) {
     fontSize: "20px",
     paddingLeft: "25px",
     paddingRight: "25px",
+    color: "#11a4ba",
   };
 
   return (
     <>
       <NavLink
         style={navLinkIcon}
-        className="nav-link bg-secondary"
+        className="nav-link bg-dark"
         to={item.path}
         onClick={item.subNav && showSubnav}
       >
-        <div className="nav-link">
+        <div className="nav-link link-color">
           {item.icon} {item.title}
           <span className="menu-span">
             {item.subNav && subnav
@@ -49,7 +37,7 @@ function TopMenu({ item }) {
           return (
             <DropdownItem
               style={navLinkIcon}
-              className="nav-link bg-dark"
+              className="sub-nav-link bg-dark"
               to={item.path}
               key={index}
             >
