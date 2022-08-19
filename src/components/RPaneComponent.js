@@ -1,6 +1,6 @@
 function RPane() {
   return (
-    <div className="col-12 col-md-11 bg-warning RPane float end">
+    <div className="w-100 bg-warning RPane float end">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

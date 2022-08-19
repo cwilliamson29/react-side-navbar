@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-    height: 70px;
+    padding-bottom: 5px;
 }
 
 .navbar-toggler-icon {
@@ -18,11 +18,11 @@ body {
 }
 
 .navbar-toggler {
-    border: 1px solid rgba(255, 255, 255);
+    border: 0px solid rgba(255, 255, 255);
 }
 
 .sb-top {
-    margin-top: 120px;
+    margin-top: 1200px;
     margin-left: 25px;
     height: 100%;
     width: 14%;
@@ -33,21 +33,41 @@ body {
     width: 14%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-height: 500px) {
+    body {
+        margin: 0px;
+        height: 100vh;
+        width: calc(100vw - 95px);
+        background-color: purple;
+    }
     .RPane {
         margin-top: 65px;
+        margin-left: 85px;
+        width: 100%;
     }
     .sidebar-spacer {
         width: 85px;
     }
+    .top-nav-mar {
+        position: fixed;
+        left: 80px;
+        width: 100%;
+        height: 60px;
+        padding-left: 180px;
+    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) and (orientation: landscape),
+screen and (max-width: 1024px) and (orientation: portrait) {
     .RPane {
-        margin-top: 20px;
+        margin-top: 5px;
+        margin-left: 0px;
     }
-    .sidebar-spacer {
-        width: 1px;
+    .collapse {
+        margin-top: 0px;
+    }
+    .navbar-toggler {
+        margin: 0px;
     }
 }
 
@@ -58,14 +78,6 @@ body {
 
 .bg-custom {
     background: #131429;
-}
-
-.top-nav-mar {
-    position: fixed;
-    left: 80px;
-    width: 100%;
-    height: 60px;
-    padding-left: 180px;
 }
 
 .nav-ditem {

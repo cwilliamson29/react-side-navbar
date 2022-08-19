@@ -24,7 +24,7 @@ function TopNav(args) {
   return (
     <>
       <div className="col-12 d-block d-sm-block d-md-block d-lg-none bg-custom">
-        <Navbar color="primary" dark expand="lg">
+        <Navbar dark expand="lg">
           <NavbarBrand href="/" className="mr-auto navbar-dark">
             React-SideBar
           </NavbarBrand>
