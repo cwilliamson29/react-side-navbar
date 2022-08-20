@@ -29,7 +29,7 @@ export const SidebarData = [
   },
   {
     title: "Posts",
-    path: "/posts",
+    path: "",
     icon: <MdIcons.MdPostAdd />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -63,7 +63,7 @@ export const SidebarData = [
   },
   {
     title: "Users",
-    path: "/users",
+    path: "",
     icon: <FaIcons.FaUsersCog />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
