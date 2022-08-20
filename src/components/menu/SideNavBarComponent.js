@@ -7,7 +7,7 @@ import SubMenu from "./SubMenuComponent";
 import IconMenu from "./IconMenuComponent";
 
 const Nav = styled.div`
-  background: #131429;
+  background: var(--bg-color-custom);
   width: 80px;
   margin-right: 10px;
   z-index: 0;
@@ -23,7 +23,7 @@ const NavIcon = styled(Link)`
 `;
 
 const SideBarNav = styled.div`
-  background: #131429;
+  background: var(--bg-color-custom);
   width: 250px;
   height: 100vh;
   display: flex;
@@ -35,7 +35,7 @@ const SideBarNav = styled.div`
   z-index: 11;
 `;
 const IconBarNav = styled.div`
-  background: #131429;
+  background: var(--bg-color-custom);
   width: 80px;
   height: 100vh;
   display: flex;

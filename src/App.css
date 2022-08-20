@@ -1,3 +1,14 @@
+:root {
+    --bg-color-custom: #131429;
+    --text-color-custom: #11a4ba;
+    --hover-bg: #252831;
+    --hover-border: #11a4ba;
+    --dropdown-custom-color: #414757;
+    --dropdown-custom-text: #fff;
+    --dropdown-hover-color: #11a4ba;
+    --dropdown-hover-border: #fff;
+}
+
 html,
 body {
     margin: 0px;
@@ -13,12 +24,12 @@ body {
 }
 
 .navbar-toggler-icon {
-    color: #11a4ba;
-    border-color: #11a4ba;
+    color: var(--text-color-custom);
+    border-color: var(--text-color-custom);
 }
 
 .text-custom {
-    color: #11a4ba;
+    color: var(--text-color-custom);
 }
 
 .text-bold {
@@ -70,7 +81,7 @@ screen and (min-width: 992px) and (orientation: portrait) {
         padding: 10px;
         font-size: 25px;
         font-weight: bolder;
-        color: #11a4ba;
+        color: var(--text-color-custom);
     }
 }
 
@@ -89,22 +100,23 @@ screen and (max-width: 991px) and (orientation: portrait) {
         margin: 0px;
     }
     .link-color {
-        color: #11a4ba;
+        color: var(--text-color-custom);
     }
     .custom-toggler .navbar-toggler-icon {
+        /**********You will need to modify the stroke inside the 'background-image' URL to match the rest of the colors*************/
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(17, 164, 186)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
     .custom-toggler.navbar-toggler {
-        border-color: rgb(17, 164, 186);
+        border-color: var(--text-color-custom);
     }
     .sub-nav-link {
         height: 45px;
         padding-left: 70px !important;
-        background-color: #131429 !important;
+        background-color: var(--bg-color-custom) !important;
     }
     .sub-nav-link:hover {
-        background: #252831;
-        border-left: 4px solid #11a4ba;
+        background: var(--bg-color-custom);
+        border-left: 4px solid var(--text-color-custom);
         color: #fff !important;
         cursor: pointer;
     }
@@ -116,7 +128,7 @@ screen and (max-width: 991px) and (orientation: portrait) {
 }
 
 .bg-custom {
-    background: #131429;
+    background: var(--bg-color-custom);
 }
 
 .nav-ditem {
