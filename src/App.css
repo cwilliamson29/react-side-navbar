@@ -17,6 +17,14 @@ body {
     border-color: #11a4ba;
 }
 
+.text-custom {
+    color: #11a4ba;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
 .navbar-toggler {
     border: 0px solid rgba(255, 255, 255);
 }
@@ -42,7 +50,7 @@ screen and (min-width: 992px) and (orientation: portrait) {
     .root {
         width: 100vw !important;
     }
-    .RPane {
+    .main-render {
         position: absolute;
         left: 104px;
         margin-top: 75px;
@@ -68,10 +76,11 @@ screen and (min-width: 992px) and (orientation: portrait) {
 
 @media screen and (max-width: 991px) and (orientation: landscape),
 screen and (max-width: 991px) and (orientation: portrait) {
-    .RPane {
+    .main-render {
         margin-top: 5px;
-        margin-left: 0px;
-        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
     }
     .collapse {
         margin-top: 0px;

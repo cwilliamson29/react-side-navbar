@@ -1,20 +1,21 @@
 import "./App.css";
-import SideBar from "./components/SideNavBarComponent";
-import RPane from "./components/RPaneComponent";
-import TopNav from "./components/TopNavComponent";
-import { BrowserRouter } from "react-router-dom";
+import SideBar from "./components/menu/SideNavBarComponent";
+import TopNav from "./components/menu/TopNavComponent";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Dashboard from "./components/Dashboard";
+import Category from "./components/Category";
 
 function App() {
   return (
     <BrowserRouter>
       <TopNav />
       <SideBar />
-      <div className="container-fluid bg-secondary flex-start">
-        <div className="row">
-          <div className="sidebar-spacer"></div>
-          <RPane />
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/categories" element={<Category />} />
+      </Routes>
     </BrowserRouter>
   );
 }
