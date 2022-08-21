@@ -37,7 +37,11 @@ function Dashboard() {
           </Card>
 
           <Card className="col-3 bg-custom text-white text-center ">
-            <p className="mt-2 mb-3">Releases</p>
+            <p className="mt-2 mb-3">
+              <a href="#release" className="text-white text-bold">
+                Releases
+              </a>
+            </p>
           </Card>
         </div>
 
@@ -295,7 +299,18 @@ function Dashboard() {
             </Card>
           </Card>
         </div>
+        <div className="row justify-content-around mt-3" id="release">
+          <Card className="col-11 col-lg-9 p-3 bg-custom">
+            <Card className="mb-1">
+              <CardHeader className="bg-secondary text-white">
+                Releases
+              </CardHeader>
+              <CardBody>Current version is v1.1.0</CardBody>
+            </Card>
+          </Card>
+        </div>
       </div>
+
       <div className="row mt-4 mb-4 justify-content-center">
         <div className="col-12 text-center">
           Free to use personal or commericial. Open source project by &nbsp;
