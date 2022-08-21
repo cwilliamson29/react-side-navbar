@@ -12,11 +12,26 @@ function Dashboard() {
           </Card>
           <Card className="mt-3">
             <CardBody className="text-center">
-              <h4> A responsive sidebar menu designed with React.</h4>
+              <h4>
+                A responsive sidebar menu designed with React and Bootstrap.
+              </h4>
             </CardBody>
           </Card>
         </div>
-        <div className="col-md-4">
+
+        <div className="row mb-5 col-md-11 justify-content-around">
+          <Card className="col-3 bg-custom text-white text-center">
+            <p className="mt-2 mb-3">Install</p>
+          </Card>
+          <Card className="col-3 bg-custom text-white text-center ">
+            <p className="mt-2 mb-3">F.A.Q.</p>
+          </Card>
+          <Card className="col-3 bg-custom text-white text-center ">
+            <p className="mt-2 mb-3">Releases</p>
+          </Card>
+        </div>
+
+        <div className="col-11 col-md-5 col-xl-4 m-auto">
           <Card>
             <CardHeader className="bg-custom text-custom text-bold">
               Custom Built Side Bar
@@ -38,7 +53,7 @@ function Dashboard() {
           </Card>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-11 col-md-5 col-xl-4 m-auto">
           <Card>
             <CardHeader className="bg-custom text-custom text-bold">
               Testing
