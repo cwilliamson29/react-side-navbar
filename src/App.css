@@ -7,6 +7,7 @@
     --dropdown-custom-text: #fff;
     --dropdown-hover-color: #11a4ba;
     --dropdown-hover-border: #fff;
+    --mobile-menu-bg-color: #252831;
 }
 
 html,
@@ -34,6 +35,14 @@ body {
 
 .text-bold {
     font-weight: bold;
+}
+
+.bg-mob-custom {
+    background-color: var(--mobile-menu-bg-color);
+}
+
+.link-color {
+    color: var(--text-color-custom);
 }
 
 .navbar-toggler {
@@ -98,9 +107,6 @@ screen and (max-width: 991px) and (orientation: portrait) {
     }
     .navbar-toggler {
         margin: 0px;
-    }
-    .link-color {
-        color: var(--text-color-custom);
     }
     .custom-toggler .navbar-toggler-icon {
         /**********You will need to modify the stroke inside the 'background-image' URL to match the rest of the colors*************/

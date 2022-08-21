@@ -10,14 +10,14 @@ function TopMenu({ item }) {
     fontSize: "20px",
     paddingLeft: "25px",
     paddingRight: "25px",
-    color: "#11a4ba",
+    color: "white",
   };
 
   return (
     <>
       <NavLink
         style={navLinkIcon}
-        className="nav-link bg-dark"
+        className="nav-link bg-mob-custom"
         to={item.path}
         onClick={item.subNav && showSubnav}
       >
@@ -37,7 +37,7 @@ function TopMenu({ item }) {
           return (
             <DropdownItem
               style={navLinkIcon}
-              className="sub-nav-link bg-dark"
+              className="sub-nav-link bg-mob-hover"
               to={item.path}
               key={index}
             >
